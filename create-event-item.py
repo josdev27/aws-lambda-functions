@@ -1,7 +1,6 @@
 from __future__ import print_function
 import boto3
 import json
-from boto3.dynamodb.conditions import Key
 from botocore.exceptions import ClientError
 import uuid
 
