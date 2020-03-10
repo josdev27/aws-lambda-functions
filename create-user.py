@@ -20,6 +20,6 @@ def lambda_handler(event, context):
         print(e.response['Error']['Message'])
         print('Check your DynamoDB table...')
     else:
-        print("PutItem succeeded:")
+        print("Create User succeeded:")
         print("Received response from DynamoDB: " + json.dumps(response, indent=2))
         return event
