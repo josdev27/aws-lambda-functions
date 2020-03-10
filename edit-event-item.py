@@ -29,22 +29,6 @@ def lambda_handler(event, context):
                 ":title":event["title"],
                 ":location":event["location"]
             },
-                    response = table.update_item(
-            Key={"id": event["id"]},
-            ExpressionAttributeNames={
-                "#addedBy": "addedBy",
-                "#date": "date",
-                "#description": "description",
-                "#title": "title",
-                "#location": "location"
-            },
-            ExpressionAttributeValues= {
-                ":addedBy":event["addedBy"],
-                ":date":event["date"],
-                ":description":event["description"],
-                ":title":event["title"],
-                ":location":event["location"]
-            },
             UpdateExpression =  ("SET #addedBy = :addedBy,"  
                                 "#date = :date,"  
                                 "#description = :description," 
